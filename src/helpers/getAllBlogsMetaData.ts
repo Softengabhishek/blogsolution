@@ -21,6 +21,7 @@ export function getAllBlogMetadata() {
       image: data.image,
       date: data.date,
       authorImage: data.authorImage || "/profile-abhi.jpg",
+      category : 'Dev-Ops'
     };
   });
 
