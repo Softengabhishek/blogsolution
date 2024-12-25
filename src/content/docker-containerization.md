@@ -4,7 +4,8 @@ slug: "docker-containerization"
 description: "Learn the fundamentals of Docker containerization, a transformative technology for building, deploying, and running applications in lightweight, portable containers."
 date: "2024-12-20"
 author: "Abhishek Gupta"
-image: "https://example.com/docker-containerization-banner.jpg"
+authorImage : "/profile-abhi.jpg"
+image: "/docker.jpg"
 ---
 
 # Introduction to Docker Containerization

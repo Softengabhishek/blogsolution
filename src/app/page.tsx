@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="h-screen mx-auto">
       <HeroSection/>
-      <Dialog>
+      {/* <Dialog>
       <DialogTrigger asChild>
         <Button variant="outline">Share</Button>
       </DialogTrigger>
@@ -54,7 +54,7 @@ export default function Home() {
           </DialogClose>
         </DialogFooter>
       </DialogContent>
-    </Dialog>
+    </Dialog> */}
     </div>
   );
 }

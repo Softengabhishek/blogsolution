@@ -1,48 +1,48 @@
-'use client'
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
+import Link from 'next/link'
+import React from 'react'
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
-
-
-
-
- export default function CarouselPlugin() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000})
-  )
- 
+const HeroSection = () => {
   return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="container mx-auto"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
+    <section
+      className="relative bg-[url(/techbg.jpg)] bg-cover bg-center bg-no-repeat"
     >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                  <CardContent className="flex  items-center justify-center">
-                  {/* <img src="/Shadcn-thumbnail.jpg" alt="Shadcn UI"/> */}
-                  {/* <span>Hello {index}</span> */}
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+      <div
+        className="absolute inset-0  sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+      ></div>
+
+      <div
+        className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+      >
+        <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+          <h1 className="text-3xl font-extrabold sm:text-5xl">
+            Let us find your
+
+            <strong className="block font-extrabold text-rose-700"> Perfect Blog </strong>
+          </h1>
+
+          <p className="mt-4 max-w-lg sm:text-xl/relaxed">
+            Get all treding tech stack blogs including MERN, Kubernetes and Docker
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4 text-center">
+            <Link
+              href="#"
+              className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+            >
+              Get Started
+            </Link>
+
+            <Link
+              href="/blogs"
+              className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+            >
+              Explore
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
+
+export default HeroSection
